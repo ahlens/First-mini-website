@@ -1,0 +1,125 @@
+
+/* Pierwszą rzeczą, którą należy wykonać jest reset ustawień domyślnych strony */
+/* 1) MARGIN - marginesy zewnętrzne
+
+   2) PADDING - marginesy wewnętrzne
+
+   3) font-family - czcionka, której będziemy używać
+
+   4) box-sizing - ustawienie ograniczenia wyświetlania strony do danego atrybutu
+
+*/
+
+* {margin: 0 0 0 0;
+   padding: 0 0 0 0;
+   font-family: Roboto, Arial;
+   box-sizing: border-box;
+}
+
+/* ustawiamy kolor body */
+body{background-color: darkgrey;}
+
+#wrapper {
+    
+/* Ustawienie max szerokości wyświetlania */    
+    max-width: 1000px;
+    
+/* auto - wolną przestrzeń rozdziel równo między daną wybraną przestrzeń */  
+	margin: 0 auto 0 auto;
+    
+/* ustawiamy kolor wrappera */
+    background-color: white;
+}
+
+header img
+{
+    /* ustawiamy szerokość 100%, żeby zawsze obraz był zgodny z wyświetlaną stroną + zmieniamy jego charakter na blokowy */
+    width: 100%;
+    display: block;
+}
+
+nav 
+{
+    overflow: hidden;
+}
+
+nav a 
+{
+	display: block;
+	width: 25%;
+	float: left;
+	text-align: center;
+	color: white;
+	background-color: blueviolet;
+	text-decoration: none;
+	background-color: black;
+	padding: 15px 30px;
+
+		/* efekt animacji przejścia między menu */
+		-webkit-transition: all 1s ease;
+		transition: all 1s ease;
+}
+
+a.menu:hover 
+{
+    background-color: blueviolet;
+}
+/* Warunek responsywności, który mówi, żeby zastosować dany parametr przy określonych kryteriach */
+
+@media (max-width:800px)
+{
+    nav a {width: 50%;}
+}
+
+@media (max-width:500px)
+{
+    nav a {width: 100%;}
+}
+
+.active {background-color: blueviolet;}
+
+article {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    padding: 0 20px;
+    
+}
+
+article h1 {
+    font-size: 30px;
+    text-align: center;
+    margin: 0 7% 20px 7%;
+    padding-bottom: 15px;
+    border-bottom: 3px solid blueviolet;
+}
+
+img.left {
+    float:left;
+    width: 35%;
+    margin: 0 10px 10px 0; 
+    border-radius: 50%;
+    border: 5px solid blueviolet;
+}
+
+article p {
+    
+    text-align: justify;
+    line-height: 25px;
+    font-size: 18px;
+    padding: 15px 0 15px 0;
+}
+
+iframe{
+    /* obrazek YT dopasowanie */
+    width: 100%;   
+}
+
+footer{
+    height: 180px;
+    background-color: blueviolet;
+    color: white;
+    line-height: 60px;
+    text-align: center;
+    margin-top: 10px;
+    
+}
